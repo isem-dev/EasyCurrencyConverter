@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Easy Currency Converter</string>
+    <string name="rates_fragment_title">Rates</string>
+    <string name="status_image_description">Status icon</string>
+    <string name="currency_code_label">COD</string>
+    <string name="currency_name_label">Currency Name</string>
+    <string name="currency_value_zero">0</string>
+
+    <string name="aud">Australian Dollar</string>
+    <string name="bgn">Bulgarian Lev</string>
+    <string name="brl">Brazilian Real</string>
+    <string name="cad">Canadian Dollar</string>
+    <string name="chf">Swiss Franc</string>
+    <string name="cny">Yuan Renminbi</string>
+    <string name="czk">Czech Koruna</string>
+    <string name="dkk">Danish Krone</string>
+    <string name="eur">Euro</string>
+    <string name="gbp">Pound Sterling</string>
+    <string name="hkd">Hong Kong Dollar</string>
+    <string name="hrk">Kuna</string>
+    <string name="huf">Forint</string>
+    <string name="idr">Rupiah</string>
+    <string name="ils">New Israeli Sheqel</string>
+    <string name="inr">Indian Rupee</string>
+    <string name="isk">Iceland Krona</string>
+    <string name="jpy">Yen</string>
+    <string name="krw">Won</string>
+    <string name="mxn">Mexican Peso</string>
+    <string name="myr">Malaysian Ringgit</string>
+    <string name="nok">Norwegian Krone</string>
+    <string name="nzd">New Zealand Dollar</string>
+    <string name="php">Philippine Peso</string>
+    <string name="pln">Zloty</string>
+    <string name="ron">Romanian Leu</string>
+    <string name="rub">Russian Ruble</string>
+    <string name="sek">Swedish Krona</string>
+    <string name="sgd">Singapore Dollar</string>
+    <string name="thb">Baht</string>
+    <string name="usd">US Dollar</string>
+    <string name="zar">Rand</string>
+
+</resources>

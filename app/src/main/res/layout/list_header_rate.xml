@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="ratesViewModel"
+            type="dev.isem.easycurrencyconverter.ui.RatesViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/currencyIcon"
+            android:layout_width="@dimen/currency_icon_size"
+            android:layout_height="@dimen/currency_icon_size"
+            android:layout_marginStart="@dimen/layout_margin_double"
+            android:layout_marginTop="@dimen/layout_margin_standard"
+            android:layout_marginBottom="@dimen/layout_margin_standard"
+            android:scaleType="centerInside"
+            app:currencyImage="@{ratesViewModel.rateHeader.currencyCode}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+
+        <TextView
+            android:id="@+id/currencyCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_margin_standard"
+            android:layout_marginTop="@dimen/layout_margin_double"
+            android:text="@{ratesViewModel.rateHeader.currencyCode}"
+            android:textSize="@dimen/currency_code_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/currencyIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/currency_code_label" />
+
+        <TextView
+            android:id="@+id/currencyName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_margin_standard"
+            android:layout_marginBottom="@dimen/layout_margin_double"
+            android:textSize="@dimen/currency_name_text_size"
+            app:currencyNameText="@{ratesViewModel.rateHeader.currencyCode}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/currencyIcon"
+            tools:text="@string/currency_name_label" />
+
+        <EditText
+            android:id="@+id/currencyInputValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/layout_margin_infinity"
+            android:layout_marginTop="@dimen/layout_margin_double"
+            android:layout_marginEnd="@dimen/layout_margin_double"
+            android:layout_marginBottom="@dimen/layout_margin_double"
+            android:ems="5"
+            android:gravity="end"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:maxLength="9"
+            android:minEms="1"
+            android:singleLine="true"
+            android:text="@={ratesViewModel.currencyInputValue}"
+            android:textSize="@dimen/currency_value_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/currencyCode"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="123456789" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
